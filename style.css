@@ -203,10 +203,11 @@ footer {
   display: none;
   width: 490px;
   position: fixed;
+  overflow: hidden;
   right: 2rem;
   bottom: 2rem;
-  height: 900px;
-  background: green;
+  border-radius: 10px;
+  height: 840px;
 }
 
 .chat-container.active {
