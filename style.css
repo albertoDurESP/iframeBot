@@ -214,6 +214,15 @@ footer {
   display: block;
 }
 
+.container-head {
+  text-align: right;
+}
+
+#closeChat {
+  cursor:pointer;
+  margin-right:1rem;
+}
+
 .popup {
   display: block;
   position: fixed;
