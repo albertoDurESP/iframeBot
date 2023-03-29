@@ -18,27 +18,45 @@
   </header>
   <main>
     <div class="container">
-      <h1>You can type into the chat:</h1>
-      <div class="input-items">
-        <p>One button</p>
-        <p>Two buttons</p>
-        <p>Three buttons</p>
-        <p>Four buttons</p>
-        <p>Misspelled button</p>
-        <p>Unexpected button</p>
-        <p>Card</p>
-        <p>Card list</p>
-        <p>Rich text</p>
-        <p>Text with button</p>
-        <p>Nested order</p>
-        <p>Clickable buttons</p>
-        <p>Same text button</p>
-        <p>Same text button reverse</p>
-        <p>Begin journey</p>
-        <p>Click only</p>
-        <p>Click only no user</p>
-        <p>Vanishing buttons</p>
-        <p>Show video</p>
+      <div class="flex-container">
+        <div>
+          <h1>You can type into the chat:</h1>
+          <div class="input-items">
+            <p>One button</p>
+            <p>Two buttons</p>
+            <p>Three buttons</p>
+            <p>Four buttons</p>
+            <p>Misspelled button</p>
+            <p>Unexpected button</p>
+            <p>Card</p>
+            <p>Card list</p>
+            <p>Rich text</p>
+            <p>Text with button</p>
+            <p>Nested order</p>
+            <p>Clickable buttons</p>
+            <p>Same text button</p>
+            <p>Same text button reverse</p>
+            <p>Begin journey</p>
+            <p>Click only</p>
+            <p>Click only no user</p>
+            <p>Vanishing buttons</p>
+            <p>Show video</p>
+          </div>
+        </div>
+        <div>
+          <h1>These items should not be picked up:</h1>
+          <div class="chat-elements">
+            <div class="message my-message">
+              <p>This is a message typically found within the chatbot. This is using the same classes (selectors) as the ones found in the chat.</p>
+            </div>
+            <div class="message my-message">
+              <p>These should be ignored and not picked up by the E2E tests.</p>
+            </div>
+            <div class="message other-message float-right">
+              <p>If you pick these up in your tests, something went wrong 😪</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </main>

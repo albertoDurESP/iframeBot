@@ -175,6 +175,60 @@ footer p {
   padding: 2rem;
 }
 
+.flex-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.flex-container h1 {
+  margin-bottom: 3rem;
+}
+
+.chat-elements {
+  border: 1px solid;
+  padding: 1rem;
+  max-width: 620px;
+  border-radius: 5px;
+}
+
+.message {
+  color: #2c2c2c;
+  padding: 18px 20px;
+  line-height: 26px;
+  font-size: 16px;
+  border-radius: 7px;
+  margin-bottom: 30px;
+  width: 90%;
+  position: relative;
+}
+
+.message:after {
+  bottom: 100%;
+  left: 7%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-bottom-color: #ff8c69;
+  border-width: 10px;
+  margin-left: -10px;
+}
+
+.my-message {
+	background: #ff8c69;
+}
+
+.other-message {
+  background: #94c2ed;
+}
+
+.other-message:after {
+  border-bottom-color: #94c2ed;
+  left: 93%;
+}
+
 .chat-start {
   background: #ff8c69;
   width: auto;
