@@ -171,6 +171,13 @@
             indexVar = 9;
             tempId = "#profile-3";
             break;
+            case "Show video":
+            case "show video":
+            case "Show iframe": 
+            case "show iframe":   
+              indexVar = 9;
+              tempId = "#message-video";
+              break;
           case "Clickable buttons":
           case "clickable buttons":
             indexVar = 10;

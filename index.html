@@ -1,62 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <title>Button Bot iframe</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <header>
-        <div class="container">
-            <div class="logo">
-                <img src="bot-icon.png" alt="Logo">
-            </div>
-            <h1>Button Bot 2.1</h1>
-        </div>
-    </header>
-    <main>
-        <div class="container">
-            <h1>You can type into the chat:</h1>
-            <div class="input-items">
-                <p>One button</p>
-                <p>Two buttons</p>
-                <p>Three buttons</p>
-                <p>Four buttons</p>
-                <p>Misspelled button</p>
-                <p>Unexpected button</p>
-                <p>Card</p>
-                <p>Card list</p>
-                <p>Rich text</p>
-                <p>Text with button</p>
-                <p>Nested order</p>
-                <p>Clickable buttons</p>
-                <p>Same text button</p>
-                <p>Same text button reverse</p>
-                <p>Begin journey</p>
-                <p>Click only</p>
-                <p>Click only no user</p>
-                <p>Vanishing buttons</p>
-              </div>
-        </div>
-    </main>
-    <footer>
-        <div class="container">
-            <h1>This is the footer</h1>
-        </div>
-    </footer>
-  </body>
+  <meta charset="utf-8">
+  <title>Button Bot iframe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="bot-icon.png" alt="Logo">
+      </div>
+      <h1>Button Bot 2.1</h1>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <h1>You can type into the chat:</h1>
+      <div class="input-items">
+        <p>One button</p>
+        <p>Two buttons</p>
+        <p>Three buttons</p>
+        <p>Four buttons</p>
+        <p>Misspelled button</p>
+        <p>Unexpected button</p>
+        <p>Card</p>
+        <p>Card list</p>
+        <p>Rich text</p>
+        <p>Text with button</p>
+        <p>Nested order</p>
+        <p>Clickable buttons</p>
+        <p>Same text button</p>
+        <p>Same text button reverse</p>
+        <p>Begin journey</p>
+        <p>Click only</p>
+        <p>Click only no user</p>
+        <p>Vanishing buttons</p>
+        <p>Show video</p>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="container">
+      <h1>BB 2.1 - iframe edition</h1>
+      <p>Made for the awesome Andraco team!</p>
+    </div>
+  </footer>
+</body>
 <div class="chat-start" id="chatStart" onclick="toggleChat()">
-    <img src="bot-icon.png" alt="Start chatting">
-    <p>Start chatting</p>
+  <img src="bot-icon.png" alt="Start chatting">
+  <p>Start chatting</p>
 </div>
 <div class="chat-container" id="chatContainer">
-    <div class="container-head"><span id="closeChat" onclick="toggleChat()">close chat</span></div>
-    <iframe src="bot.html" frameborder="0" width="100%" height="100%"></iframe>
+  <div class="container-head"><span id="closeChat" onclick="toggleChat()"><strong>X</strong> close</span></div>
+  <iframe src="bot.html" frameborder="0" width="100%" height="100%"></iframe>
 </div>
 <div id="cookie-popup" class="popup">
-    <div class="popup-content">
-      <span class="close" onclick="closePopup()">&times;</span>
-      <p>Before you marry a person, you should first make them use a computer with slow Internet to see who they really
-        are.</p>
-      <button id="popup-agree" onclick="closePopup()">I agree</button>
-    </div>
+  <div class="popup-content">
+    <span class="close" onclick="closePopup()">&times;</span>
+    <p>Before you marry a person, you should first make them use a computer with slow Internet to see who they really
+      are.</p>
+    <button id="popup-agree" onclick="closePopup()">I agree</button>
   </div>
+</div>
 <script src="script.js"></script>
+
+</html>

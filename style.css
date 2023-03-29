@@ -157,7 +157,7 @@ header .container {
 }
 
 main {
-  height: -webkit-fill-available;
+  height: 100vh;
 }
 
 .input-items{
@@ -166,6 +166,9 @@ main {
 
 footer {
   border-top: 1px solid;
+}
+footer p {
+  margin-top: 1rem;
 }
 
 .container {
@@ -219,9 +222,15 @@ footer {
 }
 
 #closeChat {
+  color: #ff8c69;
   cursor:pointer;
   margin-right:1rem;
 }
+
+#closeChat:hover {
+  color:  #ff7850;
+}
+
 
 .popup {
   display: block;
