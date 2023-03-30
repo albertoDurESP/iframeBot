@@ -20,31 +20,46 @@
     <div class="container">
       <div class="flex-container">
         <div>
-          <h1>You can type into the chat:</h1>
-          <div class="input-items">
-            <p>One button</p>
-            <p>Two buttons</p>
-            <p>Three buttons</p>
-            <p>Four buttons</p>
-            <p>Misspelled button</p>
-            <p>Unexpected button</p>
-            <p>Card</p>
-            <p>Card list</p>
-            <p>Rich text</p>
-            <p>Text with button</p>
-            <p>Nested order</p>
-            <p>Clickable buttons</p>
-            <p>Same text button</p>
-            <p>Same text button reverse</p>
-            <p>Begin journey</p>
-            <p>Click only</p>
-            <p>Click only no user</p>
-            <p>Vanishing buttons</p>
-            <p>Show video</p>
+          <h2>You can type into the chat:</h2>
+          <ul>
+            <li>One button</li>
+            <li>Two buttons</li>
+            <li>Three buttons</li>
+            <li>Four buttons</li>
+            <li>Misspelled button</li>
+            <li>Unexpected button</li>
+            <li>Card</li>
+            <li>Card list</li>
+            <li>Rich text</li>
+            <li>Text with button</li>
+            <li>Nested order</li>
+            <li>Clickable buttons</li>
+            <li>Same text button</li>
+            <li>Same text button reverse</li>
+            <li>Begin journey</li>
+            <li>Click only</li>
+            <li>Click only no user</li>
+            <li>Vanishing buttons</li>
+          </ul>
+          <h2>iframe only commands:</h2>
+          <ul>
+            <li>Show video</li>
+          </ul>
+        </div>
+        <div>
+          <h2>Situation controls:</h2>
+            <p>This switch will start a timer to interrupt the view with an advert after 15 seconds.</p>
+            <p>Use the selector <code>#timerCheckbox</code> as a prerequisite to enable the advert.</p>
+            <div class="controls">
+              <label class="switch">
+                  <input type="checkbox" class="checkbox" id="timerCheckbox">
+                  <div class="slider"></div>
+              </label>
+              <div id="timer"></div>
           </div>
         </div>
         <div>
-          <h1>These items should not be picked up:</h1>
+          <h2>These items should not be picked up:</h2>
           <div class="chat-elements">
             <div class="message my-message">
               <p>This is a message typically found within the chatbot. This is using the same classes (selectors) as the ones found in the chat.</p>
@@ -55,6 +70,12 @@
             <div class="message other-message float-right">
               <p>If you pick these up in your tests, something went wrong 😪</p>
             </div>
+            <div class="message my-message button-options">
+              <button>One button</button>
+              <button>Two buttons</button>
+              <button>Three buttons</button>
+              <button>Four buttons</button>
+            </div>
           </div>
         </div>
       </div>
@@ -62,14 +83,14 @@
   </main>
   <footer>
     <div class="container">
-      <h1>BB 2.1 - iframe edition</h1>
+      <h2>BB 2.1 - iframe edition</h1>
       <p>Made for the awesome Andraco team!</p>
     </div>
   </footer>
 </body>
 <div class="chat-start" id="chatStart" onclick="toggleChat()">
   <img src="bot-icon.png" alt="Start chatting">
-  <p>Start chatting</p>
+  <span>Start chatting</span>
 </div>
 <div class="chat-container" id="chatContainer">
   <div class="container-head"><span id="closeChat" onclick="toggleChat()"><strong>X</strong> close</span></div>
@@ -81,6 +102,13 @@
     <p>Before you marry a person, you should first make them use a computer with slow Internet to see who they really
       are.</p>
     <button id="popup-agree" onclick="closePopup()">I agree</button>
+  </div>
+</div>
+<div id="advert-popup" class="popup ad">
+  <div class="popup-content">
+    <span class="close" onclick="closeAdvert()">&times;</span>
+    <p>Boom boom boom, let me here you say wayoo</p>
+    <button id="popup-agree" onclick="closeAdvert()">Wayoo</button>
   </div>
 </div>
 <script src="script.js"></script>
