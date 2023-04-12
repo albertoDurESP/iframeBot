@@ -21,6 +21,7 @@
       "This is a click only example. You'll see the text area is currently disabled until you click the below button:",
       "Abracadabra - the button has gone!     (display:none)",
       "Abracadabra - the button has gone!     (DOM Removed)",
+      "The following button does nothing... go ahead and try",
     ],
     buttons: [
       "Button One",
@@ -262,6 +263,11 @@
           indexVar = 16;
           tempId = "#message-vanish-2";
           abraCadabraDom();
+          break;
+        case "Dead button":
+        case "dead button":
+          indexVar = 17;
+          tempId = "#message-buttons-nothing";
           break;
         //default
         default:
