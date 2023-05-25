@@ -271,6 +271,12 @@
           tempId = "#message-vanish-3";
           abraCadabraDom3();
           break;
+          case "Vanishing dialog style":
+            case "vanishing dialog style":  
+            indexVar = 18;
+            tempId = "#message-vanish-4";
+            abraCadabra10();
+            break;
         case "Dead button":
         case "dead button":
           indexVar = 17;
@@ -335,9 +341,15 @@ function abraCadabraDom() {
   document.getElementById("dissapearing-button-0").remove();
 }
 
-function abraCadabraDom3() {
+function abraCadabraDom10() {
   setTimeout(() => {
     document.getElementById("dissapearing-dialog").remove();
+  }, 10000);
+}
+
+function abraCadabra10() {
+  setTimeout(() => {
+    document.getElementById("dissapearing-dialog-vanish").style.visibility = "hidden";
   }, 10000);
 }
 
