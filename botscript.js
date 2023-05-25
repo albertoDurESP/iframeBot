@@ -22,6 +22,7 @@
       "Abracadabra - the button has gone!     (display:none)",
       "Abracadabra - the button has gone!     (DOM Removed)",
       "The following button does nothing... go ahead and try",
+      "Let me show you a magic trick:",
     ],
     buttons: [
       "Button One",
@@ -264,6 +265,12 @@
           tempId = "#message-vanish-2";
           abraCadabraDom();
           break;
+          case "Vanishing dialog":
+          case "vanishing dialog":  
+          indexVar = 18;
+          tempId = "#message-vanish-3";
+          abraCadabraDom3();
+          break;
         case "Dead button":
         case "dead button":
           indexVar = 17;
@@ -327,3 +334,10 @@ function abraCadabra() {
 function abraCadabraDom() {
   document.getElementById("dissapearing-button-0").remove();
 }
+
+function abraCadabraDom3() {
+  setTimeout(() => {
+    document.getElementById("dissapearing-dialog").remove();
+  }, 10000);
+}
+
