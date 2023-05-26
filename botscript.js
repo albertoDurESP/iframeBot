@@ -252,6 +252,7 @@
           tempId = "#click-only-0";
           break;
         case "Vanishing buttons":
+         case "vanishing buttons": 
           indexVar = 9;
           tempId = "#message-vanish-0";
           break;
@@ -282,6 +283,10 @@
           indexVar = 17;
           tempId = "#message-buttons-nothing";
           break;
+        case "No response":
+        case "no response":
+          console.log("Nothing!");
+        break;
         //default
         default:
           indexVar = 6;
