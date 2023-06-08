@@ -14,11 +14,10 @@
   </div> <!-- end chat-header -->
 
   <div class="chat-history">
-    <ul>
+    <ul id="history">
       <li>
         <div class="message-data">
           <span class="message-data-name"><i class="fa fa-circle online"></i>Button Bot 2.0</span>
-          <span class="message-data-time">10:12 AM, Today</span>
         </div>
         <div class="message my-message">
           Hi, I am Button Bot 2.0! I am here to help you test your E2E project.
@@ -28,12 +27,19 @@
       <li>
         <div class="message-data">
           <span class="message-data-name"><i class="fa fa-circle online"></i>Button Bot 2.0</span>
-          <span class="message-data-time">10:20 AM, Today</span>
         </div>
         <div class="message my-message">
           <q>
             Type a statement from the list on the right in the text area below to begin.
           </q>
+        </div>
+      </li>
+      <li id="sometimes-shown" class="hidden">
+        <div class="message-data">
+          <span class="message-data-name"><i class="fa fa-circle online"></i>Button Bot 2.0</span>
+        </div>
+        <div class="message my-message">
+          This message will sometimes be shown. Not all the time though... So be sure to mark it as optional!
         </div>
       </li>
     </ul>

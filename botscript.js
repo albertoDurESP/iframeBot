@@ -37,6 +37,8 @@
       this.cacheDOM();
       this.bindEvents();
       this.render();
+      this.getCurrentTime();
+      console.log(this.getCurrentTime());
     },
     cacheDOM: function () {
       this.$chatHistory = $(".chat-history");
@@ -311,6 +313,7 @@
   };
 
   chat.init();
+  randomMessage();
 })();
 
 function submitText() {
@@ -358,3 +361,14 @@ function abraCadabra10() {
   }, 10000);
 }
 
+
+function randomMessage() {
+  var randomNumber = Math.random();
+  var isShown = randomNumber >= 0.5;
+  var resultElement = document.getElementById("sometimes-shown");
+  if (isShown) {
+    resultElement.classList.remove("hidden");
+  } else {
+    resultElement.classList.add("hidden");
+  }
+}
