@@ -23,6 +23,7 @@
       "Abracadabra - the button has gone!     (DOM Removed)",
       "The following button does nothing... go ahead and try",
       "Let me show you a magic trick:",
+      "Let me pick some optional messages for you:"
     ],
     buttons: [
       "Button One",
@@ -285,6 +286,15 @@
           indexVar = 17;
           tempId = "#message-buttons-nothing";
           break;
+          case "Optional":
+          case "optional":
+            indexVar = 19;
+          //select number at random
+          const randomNumber = Math.floor(Math.random() * 3) + 1;
+          tempId = "#message-optional-" + randomNumber;
+          console.log(tempId);
+          //end two at random
+          break;
         case "No response":
         case "no response":
           console.log("Nothing!");
@@ -359,6 +369,22 @@ function abraCadabra10() {
   setTimeout(() => {
     document.getElementById("dissapearing-dialog-vanish").style.visibility = "hidden";
   }, 10000);
+}
+
+function optionalDecide() {
+  setTimeout(()=>{
+    const randomNumber = Math.floor(Math.random() * 3) + 1;
+    const targetId = 'option';
+    const targetElement = document.getElementById(targetId + randomNumber);
+    if (targetElement) {
+      targetElement.remove();
+      // Modify other properties or perform actions on the targeted element
+    } else {
+      console.error('Element with ID "${targetId}" not found.');
+    }
+    
+  },500)
+
 }
 
 
