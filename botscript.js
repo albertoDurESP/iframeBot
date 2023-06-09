@@ -288,12 +288,15 @@
           break;
           case "Optional":
           case "optional":
-            indexVar = 19;
-          //select number at random
+          indexVar = 19;
           const randomNumber = Math.floor(Math.random() * 3) + 1;
           tempId = "#message-optional-" + randomNumber;
-          console.log(tempId);
-          //end two at random
+          break;
+          case "Optional buttons":
+          case "optional buttons":
+          indexVar = 19;
+          const randomNumberBtn = Math.floor(Math.random() * 3) + 1;
+          tempId = "#message-optional-btn-" + randomNumberBtn;
           break;
         case "No response":
         case "no response":
