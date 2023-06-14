@@ -273,7 +273,7 @@
           case "vanishing dialog":  
           indexVar = 18;
           tempId = "#message-vanish-3";
-          abraCadabraDom3();
+          abraCadabraDom10();
           break;
           case "Vanishing dialog style":
             case "vanishing dialog style":  
