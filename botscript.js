@@ -23,7 +23,8 @@
       "Abracadabra - the button has gone!     (DOM Removed)",
       "The following button does nothing... go ahead and try",
       "Let me show you a magic trick:",
-      "Let me pick some optional messages for you:"
+      "Let me pick some optional messages for you:",
+      "Let me just find the link...",
     ],
     buttons: [
       "Button One",
@@ -255,7 +256,7 @@
           tempId = "#click-only-0";
           break;
         case "Vanishing buttons":
-         case "vanishing buttons": 
+        case "vanishing buttons":
           indexVar = 9;
           tempId = "#message-vanish-0";
           break;
@@ -269,31 +270,40 @@
           tempId = "#message-vanish-2";
           abraCadabraDom();
           break;
-          case "Vanishing dialog":
-          case "vanishing dialog":  
+        case "Vanishing dialog":
+        case "vanishing dialog":
           indexVar = 18;
           tempId = "#message-vanish-3";
           abraCadabraDom10();
           break;
-          case "Vanishing dialog style":
-            case "vanishing dialog style":  
-            indexVar = 18;
-            tempId = "#message-vanish-4";
-            abraCadabra10();
-            break;
+        case "Vanishing dialog style":
+        case "vanishing dialog style":
+          indexVar = 18;
+          tempId = "#message-vanish-4";
+          abraCadabra10();
+          break;
         case "Dead button":
         case "dead button":
           indexVar = 17;
           tempId = "#message-buttons-nothing";
           break;
-          case "Optional":
-          case "optional":
+        case "Happy link":
+        case "happy link":
+          indexVar = 20;
+          tempId = "#link-0";
+          break;
+        case "404 link":
+          indexVar = 20;
+          tempId = "#link-1";
+          break;
+        case "Optional":
+        case "optional":
           indexVar = 19;
           const randomNumber = Math.floor(Math.random() * 3) + 1;
           tempId = "#message-optional-" + randomNumber;
           break;
-          case "Optional buttons":
-          case "optional buttons":
+        case "Optional buttons":
+        case "optional buttons":
           indexVar = 19;
           const randomNumberBtn = Math.floor(Math.random() * 3) + 1;
           tempId = "#message-optional-btn-" + randomNumberBtn;
@@ -301,7 +311,7 @@
         case "No response":
         case "no response":
           console.log("Nothing!");
-        break;
+          break;
         //default
         default:
           indexVar = 6;
@@ -370,14 +380,15 @@ function abraCadabraDom10() {
 
 function abraCadabra10() {
   setTimeout(() => {
-    document.getElementById("dissapearing-dialog-vanish").style.visibility = "hidden";
+    document.getElementById("dissapearing-dialog-vanish").style.visibility =
+      "hidden";
   }, 10000);
 }
 
 function optionalDecide() {
-  setTimeout(()=>{
+  setTimeout(() => {
     const randomNumber = Math.floor(Math.random() * 3) + 1;
-    const targetId = 'option';
+    const targetId = "option";
     const targetElement = document.getElementById(targetId + randomNumber);
     if (targetElement) {
       targetElement.remove();
@@ -385,11 +396,8 @@ function optionalDecide() {
     } else {
       console.error('Element with ID "${targetId}" not found.');
     }
-    
-  },500)
-
+  }, 500);
 }
-
 
 function randomMessage() {
   var randomNumber = Math.random();
