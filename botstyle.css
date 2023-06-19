@@ -185,6 +185,7 @@ u {
   float: left;
   border-radius: 100%;
   height: 3rem;
+  background: #ff8c69;
 }
 
 .chat .chat-header .chat-about {
