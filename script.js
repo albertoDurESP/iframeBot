@@ -50,3 +50,17 @@ function closeAdvert() {
   advert.style.display = "none";
 }
 
+    // Add click event listener to accordion titles
+    var accordionTitles = document.querySelectorAll('.accordion-title');
+    accordionTitles.forEach(function (title) {
+      title.addEventListener('click', function () {
+        // Toggle display of accordion content
+        var content = this.nextElementSibling;
+        if (content.style.display === 'block') {
+          content.style.display = 'none';
+        } else {
+          content.style.display = 'block';
+        }
+      });
+    });
+
