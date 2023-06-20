@@ -296,6 +296,11 @@
           indexVar = 20;
           tempId = "#link-1";
           break;
+          case "Relative link":
+          case "relative link":
+          indexVar = 20;
+          tempId = "#link-2";
+          break;
         case "Optional":
         case "optional":
           indexVar = 19;
