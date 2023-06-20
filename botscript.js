@@ -301,6 +301,11 @@
           indexVar = 20;
           tempId = "#link-2";
           break;
+          case "Broken relative link":
+          case "broken relative link":
+          indexVar = 20;
+          tempId = "#link-2a";
+          break;
         case "Optional":
         case "optional":
           indexVar = 19;
