@@ -1,6 +1,7 @@
 (function () {
   let indexVar;
   var tempId = "#message-buttons-";
+  let waitTime = 1500;
   var chat = {
     messageToSend: "",
     messageResponses: [
@@ -25,6 +26,7 @@
       "Let me show you a magic trick:",
       "Let me pick some optional messages for you:",
       "Let me just find the link...",
+      "I managed to hold my breath that long!",
     ],
     buttons: [
       "Button One",
@@ -89,7 +91,7 @@
             this.$chatHistoryList.append(templateResponse(contextResponse));
             this.scrollToBottom();
           }.bind(this),
-          1500
+          waitTime
         );
         setTimeout(
           function () {
@@ -103,235 +105,246 @@
     addMessage: function () {
       this.messageToSend = this.$textarea.val();
       const expr = this.messageToSend.trim();
-      switch (expr) {
-        case "One button":
-        case "one button":
-          indexVar = 0;
-          tempId = "#message-buttons-0";
-          break;
-        case "Two buttons":
-        case "two buttons":
-          indexVar = 1;
-          tempId = "#message-buttons-1";
-          break;
-        case "Three buttons":
-        case "three buttons":
-          indexVar = 2;
-          tempId = "#message-buttons-2";
-          break;
-        case "Four buttons":
-        case "four buttons":
-          indexVar = 3;
-          tempId = "#message-buttons-3";
-          break;
-        case "Misspelled button":
-        case "misspelled button":
-          indexVar = 4;
-          tempId = "#message-buttons-4";
-          break;
-        case "Unexpected button":
-        case "unexpected button":
-          indexVar = 5;
-          tempId = "#message-buttons-5";
-          break;
-        case "Card":
-        case "card":
-          indexVar = 7;
-          tempId = "#message-rich-0";
-          break;
-        case "Card list":
-        case "card list":
-          indexVar = 7;
-          tempId = "#message-rich-7";
-          break;
-        case "Rich text":
-        case "rich text":
-          indexVar = 8;
-          tempId = "#message-rich-1";
-          break;
-        case "Text with button":
-        case "text with button":
-          indexVar = 9;
-          tempId = "#message-rich-2";
-          break;
-        case "Nested order":
-        case "nested order":
-          indexVar = 9;
-          tempId = "#message-rich-3";
-          break;
-        case "View profile":
-        case "view profile":
-        case "More about Button Bot":
-          indexVar = 9;
-          tempId = "#profile-0";
-          break;
-        case "More about James":
-          indexVar = 9;
-          tempId = "#profile-1";
-          break;
-        case "More about Brandon":
-          indexVar = 9;
-          tempId = "#profile-2";
-          break;
-        case "More about Benoit":
-          indexVar = 9;
-          tempId = "#profile-3";
-          break;
-        case "Show video":
-        case "show video":
-        case "Show iframe":
-        case "show iframe":
-          indexVar = 9;
-          tempId = "#message-video";
-          break;
-        case "Clickable buttons":
-        case "clickable buttons":
-          indexVar = 10;
-          tempId = "#message-buttons-6";
-          break;
-        case "Surprise me, 'meow'":
-        case "surprise me, 'meow'":
-          indexVar = 9;
-          tempId = "#message-rich-5";
-          break;
-        case "Same text button":
-        case "same text button":
-          indexVar = 11;
-          tempId = "#message-buttons-7";
-          break;
-        case "Same text button reverse":
-        case "same text button reverse":
-          indexVar = 11;
-          tempId = "#message-buttons-7-reverse";
-          break;
-        case "may contain":
-          indexVar = 12;
-          tempId = "#you-clicked-0";
-          break;
-        case "text as the button:":
-          indexVar = 12;
-          tempId = "#you-clicked-1";
-          break;
-        case "journey begin":
-        case "Journey begin":
-        case "begin journey":
-        case "Begin journey":
-          indexVar = 13;
-          tempId = "#journey-0";
-          break;
-        case "begin":
-          indexVar = 12;
-          tempId = "#journey-1";
-          break;
-        case "continue":
-          indexVar = 12;
-          tempId = "#journey-2";
-          break;
-        case "keep going":
-          indexVar = 12;
-          tempId = "#journey-3";
-          break;
-        case "exit":
-          indexVar = 12;
-          tempId = "#journey-exit";
-          break;
-        case "click only":
-        case "Click only":
-          indexVar = 14;
-          tempId = "#click-only";
-          clickOnly();
-          break;
-        case "click only no user":
-        case "Click only no user":
-          indexVar = 14;
-          tempId = "#click-only-1";
-          clickOnly();
-          break;
-        case "Click me":
-          indexVar = 12;
-          tempId = "#click-only-0";
-          break;
-        case "Click me no user response":
-          indexVar = 12;
-          tempId = "#click-only-0";
-          break;
-        case "Vanishing buttons":
-        case "vanishing buttons":
-          indexVar = 9;
-          tempId = "#message-vanish-0";
-          break;
-        case "Click here to hide this button":
-          indexVar = 15;
-          tempId = "#message-vanish-1";
-          abraCadabra();
-          break;
-        case "Click here to remove this button":
-          indexVar = 16;
-          tempId = "#message-vanish-2";
-          abraCadabraDom();
-          break;
-        case "Vanishing dialog":
-        case "vanishing dialog":
-          indexVar = 18;
-          tempId = "#message-vanish-3";
-          abraCadabraDom10();
-          break;
-        case "Vanishing dialog style":
-        case "vanishing dialog style":
-          indexVar = 18;
-          tempId = "#message-vanish-4";
-          abraCadabra10();
-          break;
-        case "Dead button":
-        case "dead button":
-          indexVar = 17;
-          tempId = "#message-buttons-nothing";
-          break;
-        case "Happy link":
-        case "happy link":
-          indexVar = 20;
-          tempId = "#link-0";
-          break;
-        case "404 link":
-          indexVar = 20;
-          tempId = "#link-1";
-          break;
-        case "Relative link":
-        case "relative link":
-          indexVar = 20;
-          tempId = "#link-2";
-          break;
-        case "Broken relative link":
-        case "broken relative link":
-          indexVar = 20;
-          tempId = "#link-2a";
-          break;
-        case "Redirect link":
-        case "redirect link":
-          indexVar = 20;
-          tempId = "#link-3";
-          break;
-        case "Optional":
-        case "optional":
-          indexVar = 19;
-          const randomNumber = Math.floor(Math.random() * 3) + 1;
-          tempId = "#message-optional-" + randomNumber;
-          break;
-        case "Optional buttons":
-        case "optional buttons":
-          indexVar = 19;
-          const randomNumberBtn = Math.floor(Math.random() * 3) + 1;
-          tempId = "#message-optional-btn-" + randomNumberBtn;
-          break;
-        case "No response":
-        case "no response":
-          console.log("Nothing!");
-          break;
-        //default
-        default:
-          indexVar = 6;
-          tempId = "#message-options";
+      let matchPattern = expr.match(/\d+/g);
+      if (matchPattern != null) {
+          waitTime = matchPattern + "000";
+          console.log(waitTime);
+          indexVar = 21;
+          tempId = "#timer";  
+       }
+      else{
+        waitTime = 1500;
+        switch (expr) {
+          case "One button":
+          case "one button":
+            indexVar = 0;
+            tempId = "#message-buttons-0";
+            break;
+          case "Two buttons":
+          case "two buttons":
+            indexVar = 1;
+            tempId = "#message-buttons-1";
+            break;
+          case "Three buttons":
+          case "three buttons":
+            indexVar = 2;
+            tempId = "#message-buttons-2";
+            break;
+          case "Four buttons":
+          case "four buttons":
+            indexVar = 3;
+            tempId = "#message-buttons-3";
+            break;
+          case "Misspelled button":
+          case "misspelled button":
+            indexVar = 4;
+            tempId = "#message-buttons-4";
+            break;
+          case "Unexpected button":
+          case "unexpected button":
+            indexVar = 5;
+            tempId = "#message-buttons-5";
+            break;
+          case "Card":
+          case "card":
+            indexVar = 7;
+            tempId = "#message-rich-0";
+            break;
+          case "Card list":
+          case "card list":
+            indexVar = 7;
+            tempId = "#message-rich-7";
+            break;
+          case "Rich text":
+          case "rich text":
+            indexVar = 8;
+            tempId = "#message-rich-1";
+            break;
+          case "Text with button":
+          case "text with button":
+            indexVar = 9;
+            tempId = "#message-rich-2";
+            break;
+          case "Nested order":
+          case "nested order":
+            indexVar = 9;
+            tempId = "#message-rich-3";
+            break;
+          case "View profile":
+          case "view profile":
+          case "More about Button Bot":
+            indexVar = 9;
+            tempId = "#profile-0";
+            break;
+          case "More about James":
+            indexVar = 9;
+            tempId = "#profile-1";
+            break;
+          case "More about Brandon":
+            indexVar = 9;
+            tempId = "#profile-2";
+            break;
+          case "More about Benoit":
+            indexVar = 9;
+            tempId = "#profile-3";
+            break;
+          case "Show video":
+          case "show video":
+          case "Show iframe":
+          case "show iframe":
+            indexVar = 9;
+            tempId = "#message-video";
+            break;
+          case "Clickable buttons":
+          case "clickable buttons":
+            indexVar = 10;
+            tempId = "#message-buttons-6";
+            break;
+          case "Surprise me, 'meow'":
+          case "surprise me, 'meow'":
+            indexVar = 9;
+            tempId = "#message-rich-5";
+            break;
+          case "Same text button":
+          case "same text button":
+            indexVar = 11;
+            tempId = "#message-buttons-7";
+            break;
+          case "Same text button reverse":
+          case "same text button reverse":
+            indexVar = 11;
+            tempId = "#message-buttons-7-reverse";
+            break;
+          case "may contain":
+            indexVar = 12;
+            tempId = "#you-clicked-0";
+            break;
+          case "text as the button:":
+            indexVar = 12;
+            tempId = "#you-clicked-1";
+            break;
+          case "journey begin":
+          case "Journey begin":
+          case "begin journey":
+          case "Begin journey":
+            indexVar = 13;
+            tempId = "#journey-0";
+            break;
+          case "begin":
+            indexVar = 12;
+            tempId = "#journey-1";
+            break;
+          case "continue":
+            indexVar = 12;
+            tempId = "#journey-2";
+            break;
+          case "keep going":
+            indexVar = 12;
+            tempId = "#journey-3";
+            break;
+          case "exit":
+            indexVar = 12;
+            tempId = "#journey-exit";
+            break;
+          case "click only":
+          case "Click only":
+            indexVar = 14;
+            tempId = "#click-only";
+            clickOnly();
+            break;
+          case "click only no user":
+          case "Click only no user":
+            indexVar = 14;
+            tempId = "#click-only-1";
+            clickOnly();
+            break;
+          case "Click me":
+            indexVar = 12;
+            tempId = "#click-only-0";
+            break;
+          case "Click me no user response":
+            indexVar = 12;
+            tempId = "#click-only-0";
+            break;
+          case "Vanishing buttons":
+          case "vanishing buttons":
+            indexVar = 9;
+            tempId = "#message-vanish-0";
+            break;
+          case "Click here to hide this button":
+            indexVar = 15;
+            tempId = "#message-vanish-1";
+            abraCadabra();
+            break;
+          case "Click here to remove this button":
+            indexVar = 16;
+            tempId = "#message-vanish-2";
+            abraCadabraDom();
+            break;
+          case "Vanishing dialog":
+          case "vanishing dialog":
+            indexVar = 18;
+            tempId = "#message-vanish-3";
+            abraCadabraDom10();
+            break;
+          case "Vanishing dialog style":
+          case "vanishing dialog style":
+            indexVar = 18;
+            tempId = "#message-vanish-4";
+            abraCadabra10();
+            break;
+          case "Dead button":
+          case "dead button":
+            indexVar = 17;
+            tempId = "#message-buttons-nothing";
+            break;
+          case "Happy link":
+          case "happy link":
+            indexVar = 20;
+            tempId = "#link-0";
+            break;
+          case "404 link":
+            indexVar = 20;
+            tempId = "#link-1";
+            break;
+          case "Relative link":
+          case "relative link":
+            indexVar = 20;
+            tempId = "#link-2";
+            break;
+          case "Broken relative link":
+          case "broken relative link":
+            indexVar = 20;
+            tempId = "#link-2a";
+            break;
+          case "Redirect link":
+          case "redirect link":
+            indexVar = 20;
+            tempId = "#link-3";
+            break;
+          case "Optional":
+          case "optional":
+            indexVar = 19;
+            const randomNumber = Math.floor(Math.random() * 3) + 1;
+            tempId = "#message-optional-" + randomNumber;
+            break;
+          case "Optional buttons":
+          case "optional buttons":
+            indexVar = 19;
+            const randomNumberBtn = Math.floor(Math.random() * 3) + 1;
+            tempId = "#message-optional-btn-" + randomNumberBtn;
+            break;
+          case "No response":
+          case "no response":
+            console.log("Nothing!");
+            break;
+          //default
+          default:
+            indexVar = 6;
+            tempId = "#message-options";
+        }
       }
+    
       this.render();
     },
     addMessageEnter: function (event) {
