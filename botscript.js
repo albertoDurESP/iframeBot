@@ -303,7 +303,8 @@
             indexVar = 20;
             tempId = "#link-0";
             break;
-          case "404 link":
+          case "FOF link":
+          case "fof link":
             indexVar = 20;
             tempId = "#link-1";
             break;
