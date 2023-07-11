@@ -316,12 +316,12 @@
           case "Broken relative link":
           case "broken relative link":
             indexVar = 20;
-            tempId = "#link-2a";
+            tempId = "#link-3";
             break;
           case "Redirect link":
           case "redirect link":
             indexVar = 20;
-            tempId = "#link-3";
+            tempId = "#link-2a";
             break;
           case "Optional":
           case "optional":
