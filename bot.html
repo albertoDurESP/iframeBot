@@ -744,6 +744,29 @@
   </li>
 </script>
 
+<script id="link-comby" type="text/x-handlebars-template">
+  <li>
+      <div class="message-data">
+          <span class="message-data-name"><i class="fa fa-circle online"></i>Button Bot 2.0</span>
+          <span class="message-data-time">{{time}}, Today</span>
+      </div>
+      <div class="message my-message">
+        <p>Here is a relative link:</p>
+          <p><a href="/iframeBot/linked.html" target="_blank">Relative link</a></p>
+          <p>Here is a broken relative link:</p>
+          <p><a href="/iframeBot/linkeddd.html" target="_blank">Relative link</a></p>
+          <p>Here is a redirect link:</p>
+          <p><a href="https://app.qbox.ai/E2E" target="_blank">Redirect link</a></p>
+          <p>Here is a 404 link:</p>
+          <p><a href="http://fruut.ai/" target="_blank">404 link</a></p>
+          <p>Here is a working link:</p>
+          <p><a href="https://google.com" target="_blank">Google</a></p>
+          <p>Here is a completely missing link:</p>
+          <p><a href="#" target="_blank">#</a></p>
+      </div>
+  </li>
+</script>
+
 <!--Timing template-->
 <script id="timer" type="text/x-handlebars-template">
   <li>

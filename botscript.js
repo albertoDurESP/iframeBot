@@ -107,12 +107,11 @@
       const expr = this.messageToSend.trim();
       let matchPattern = expr.match(/\d+/g);
       if (matchPattern != null) {
-          waitTime = matchPattern + "000";
-          console.log(waitTime);
-          indexVar = 21;
-          tempId = "#timer";  
-       }
-      else{
+        waitTime = matchPattern + "000";
+        console.log(waitTime);
+        indexVar = 21;
+        tempId = "#timer";
+      } else {
         waitTime = 1500;
         switch (expr) {
           case "One button":
@@ -323,6 +322,11 @@
             indexVar = 20;
             tempId = "#link-2a";
             break;
+          case "Combination links":
+          case "combination links":
+            indexVar = 20;
+            tempId = "#link-comby";
+            break;
           case "Optional":
           case "optional":
             indexVar = 19;
@@ -345,7 +349,7 @@
             tempId = "#message-options";
         }
       }
-    
+
       this.render();
     },
     addMessageEnter: function (event) {
