@@ -327,7 +327,7 @@
             </div>
             <div class="slider-card">
               <div class="card">
-                <img src="bot-icon.png" alt="Avatar" title="Button Bot">
+                <img src="bot-icon.svg" alt="Avatar" title="Button Bot">
                 <div class="info">
                   <div class="title">Benoit Bot 2.0</div>
                   <p>CEO</p>
@@ -804,6 +804,79 @@
           <p>Okay, I will wait that long in seconds.</p>
       </div>
   </li>
+</script>
+
+<script id="link-carousel" type="text/x-handlebars-template">
+  <li>
+    <div class="my-message card-list">
+      <div class="slider-container">
+        <div class="slider-arrow slider-prev"><</div>
+        <div class="slider-cards">
+          <div class="slider-card">
+            <div class="card">
+              <img src="bot-icon.svg" alt="Avatar" title="Button Bot">
+              <div class="info">
+                <div class="title">Button Bot 2.0</div>
+                <p>Architect & Engineer</p>
+                <p><a href="/iframeBot/linked.html" target="_blank">Relative link</a></p>
+                <button onclick="submitText()">More about Button Bot</button>
+              </div>
+            </div>
+          </div>
+          <div class="slider-card">
+            <div class="card">
+              <img src="bot-icon.svg" alt="Avatar" title="Button Bot">
+              <div class="info">
+                <div class="title">James Bot 2.0</div>
+                <p>UI Developer</p>
+                <p><a href="/iframeBot/linkeddd.html" target="_blank">Broken relative link</a></p>
+                <button onclick="submitText()">More about James</button>
+              </div>
+            </div>
+          </div>
+          <div class="slider-card">
+            <div class="card">
+              <img src="bot-icon.svg" alt="Avatar" title="Button Bot">
+              <div class="info">
+                <div class="title">Brandon Bot 2.0</div>
+                <p>Senior Developer</p>
+                <p><a href="http://fruut.ai/" target="_blank">404 link</a></p>
+                <button onclick="submitText()">More about Brandon</button>
+              </div>
+            </div>
+          </div>
+          <div class="slider-card">
+            <div class="card">
+              <img src="bot-icon.svg" alt="Avatar" title="Button Bot">
+              <div class="info">
+                <div class="title">Benoit Bot 2.0</div>
+                <p>CEO</p>
+                <p><a href="https://google.com" target="_blank">Google</a></p>
+                <button onclick="submitText()">More about Benoit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slider-arrow slider-next">></div>
+      </div>
+    </div>
+  </li>
+  <script>
+    //slider
+    const sliderContainer1 = document.querySelector('.slider-container');
+    const sliderCards1 = document.querySelector('.slider-cards');
+    const prevArrow1 = document.querySelector('.slider-prev');
+    const nextArrow1 = document.querySelector('.slider-next');
+    const cardWidth1 = sliderCards1.querySelector('.slider-card').offsetWidth + 20; // add margin-right
+
+    prevArrow1.addEventListener('click', () => {
+      sliderCards1.scrollLeft -= cardWidth1;
+    });
+
+    nextArrow1.addEventListener('click', () => {
+      sliderCards1.scrollLeft += cardWidth1;
+    });
+  </script>
 </script>
  
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>

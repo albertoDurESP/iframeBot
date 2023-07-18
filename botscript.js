@@ -337,6 +337,11 @@
             indexVar = 20;
             tempId = "#link-comby";
             break;
+          case "Carousel links":
+          case "carousel links":
+            indexVar = 20;
+            tempId = "#link-carousel";
+            break;
           case "Optional":
           case "optional":
             indexVar = 19;
