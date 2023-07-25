@@ -878,6 +878,79 @@
     });
   </script>
 </script>
+
+<script id="link-carousel-0" type="text/x-handlebars-template">
+  <li>
+    <div class="my-message card-list">
+      <div class="slider-container">
+        <div class="slider-arrow slider-prev"><</div>
+        <div class="slider-cards">
+          <div class="slider-card">
+            <div class="card">
+              <img src="bot-icon.svg" alt="Avatar" title="Button Bot">
+              <div class="info">
+                <div class="title">Button Bot 2.0</div>
+                <p>Architect & Engineer</p>
+                <p><a href="https://google.com" target="_blank">Google</a></p>
+                <button onclick="submitText()">More about Button Bot</button>
+              </div>
+            </div>
+          </div>
+          <div class="slider-card">
+            <div class="card">
+              <img src="bot-icon.svg" alt="Avatar" title="Button Bot">
+              <div class="info">
+                <div class="title">James Bot 2.0</div>
+                <p>UI Developer</p>
+                <p><a href="https://google.com" target="_blank">Google</a></p>
+                <button onclick="submitText()">More about James</button>
+              </div>
+            </div>
+          </div>
+          <div class="slider-card">
+            <div class="card">
+              <img src="bot-icon.svg" alt="Avatar" title="Button Bot">
+              <div class="info">
+                <div class="title">Brandon Bot 2.0</div>
+                <p>Senior Developer</p>
+                <p><a href="https://google.com" target="_blank">Google</a></p>
+                <button onclick="submitText()">More about Brandon</button>
+              </div>
+            </div>
+          </div>
+          <div class="slider-card">
+            <div class="card">
+              <img src="bot-icon.svg" alt="Avatar" title="Button Bot">
+              <div class="info">
+                <div class="title">Benoit Bot 2.0</div>
+                <p>CEO</p>
+                <p><a href="https://google.com" target="_blank">Google</a></p>
+                <button onclick="submitText()">More about Benoit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slider-arrow slider-next">></div>
+      </div>
+    </div>
+  </li>
+  <script>
+    //slider
+    const sliderContainer2 = document.querySelector('.slider-container');
+    const sliderCards2 = document.querySelector('.slider-cards');
+    const prevArrow2 = document.querySelector('.slider-prev');
+    const nextArrow2 = document.querySelector('.slider-next');
+    const cardWidth2 = sliderCards2.querySelector('.slider-card').offsetWidth + 20; // add margin-right
+
+    prevArrow2.addEventListener('click', () => {
+      sliderCards2.scrollLeft -= cardWidth2;
+    });
+
+    nextArrow2.addEventListener('click', () => {
+      sliderCards2.scrollLeft += cardWidth2;
+    });
+  </script>
+</script>
  
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"

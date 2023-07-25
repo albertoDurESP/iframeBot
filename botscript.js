@@ -342,6 +342,11 @@
             indexVar = 20;
             tempId = "#link-carousel";
             break;
+            case "Carousel links pass":
+          case "carousel links pass":
+            indexVar = 20;
+            tempId = "#link-carousel-0";
+            break;
           case "Optional":
           case "optional":
             indexVar = 19;
