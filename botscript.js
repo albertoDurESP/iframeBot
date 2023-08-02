@@ -312,6 +312,11 @@
             indexVar = 20;
             tempId = "#link-4";
             break;
+            case "Dead link two":
+              case "dead link two":
+                indexVar = 20;
+                tempId = "#link-4b";
+                break;
             case "Missing link":
           case "missing link":
             indexVar = 20;
