@@ -121,8 +121,10 @@ var linkGlobal;
       {
         console.log('Expression is: ', expr);
         const linkArray = expr.split(" ");
+        linkArray.splice(0, 1);
+        var textAll = linkArray.join(' ');
         console.log(linkArray[1])
-        makeLink(linkArray[1]);
+        makeLink(textAll);
         indexVar = 22;
         tempId = "#generated-link";
       } else {
