@@ -1,9 +1,12 @@
+var linkGlobal;
 (function () {
+  var linkOutput = linkGlobal;
   let indexVar;
   var tempId = "#message-buttons-";
   let waitTime = 1500;
   var chat = {
     messageToSend: "",
+    generatedLink: "",
     messageResponses: [
       "Here is an example of of a single button:",
       "Here is an example of two buttons:",
@@ -27,6 +30,7 @@
       "Let me pick some optional messages for you:",
       "Let me just find the link...",
       "I managed to hold my breath that long!",
+      "Sure, here you go:",
     ],
     buttons: [
       "Button One",
@@ -42,6 +46,7 @@
       this.bindEvents();
       this.render();
       this.getCurrentTime();
+      this.getCurrentLink();
       console.log(this.getCurrentTime());
     },
     cacheDOM: function () {
@@ -77,6 +82,7 @@
         );
         var contextResponse = {
           response: this.messageResponses[indexVar],
+          generatedLink: this.getCurrentLink(),
           time: this.getCurrentTime(),
         };
 
@@ -111,7 +117,16 @@
         console.log(waitTime);
         indexVar = 21;
         tempId = "#timer";
+      } else if (expr.includes("Generate"))
+      {
+        console.log('Expression is: ', expr);
+        const linkArray = expr.split(" ");
+        console.log(linkArray[1])
+        makeLink(linkArray[1]);
+        indexVar = 22;
+        tempId = "#generated-link";
       } else {
+        linkGlobal = "";
         waitTime = 1500;
         switch (expr) {
           case "One button":
@@ -391,6 +406,10 @@
         .toLocaleTimeString()
         .replace(/([\d]+:[\d]{2})(:[\d]{2})(.*)/, "$1$3");
     },
+    getCurrentLink: function() {
+      var linkReturned = linkGlobal;
+      return linkReturned
+    }
   };
 
   chat.init();
@@ -466,4 +485,20 @@ function randomMessage() {
   } else {
     resultElement.classList.add("hidden");
   }
+}
+
+//Link generator code
+function makeLink(linkText) {
+  var linkOutput = urlify(linkText);
+  console.log("Output link: ", linkOutput);
+  linkGlobal = linkOutput;
+}
+
+function urlify(text) {
+  var urlRegex = /(((https?:\/\/)|(www\.))[^\s]+)/g;
+  //var urlRegex = /(https?:\/\/[^\s]+)/g;
+  return text.replace(urlRegex, function(url,b,c) {
+      var url2 = (c == 'www.') ?  'http://' +url : url;
+      return '<a href="' +url2+ '" target="_blank">' + url + '</a>';
+  }) 
 }
