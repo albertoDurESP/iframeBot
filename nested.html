@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Button Bot iframe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="bot-icon.svg" alt="Logo">
+      </div>
+      <h1>Button Bot 2.1</h1>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <div class="flex-container">
+        <div>
+          <div class="accordion">
+            <div class="accordion-title">You can type into the chat:</div>
+            <div class="accordion-content">
+              <ul>
+                <li>One button</li>
+                <li>Two buttons</li>
+                <li>Three buttons</li>
+                <li>Four buttons</li>
+                <li>Misspelled button</li>
+                <li>Unexpected button</li>
+                <li>Card</li>
+                <li>Card list</li>
+                <li>Rich text</li>
+                <li>Text with button</li>
+                <li>Nested order</li>
+                <li>Clickable buttons</li>
+                <li>Same text button</li>
+                <li>Same text button reverse</li>
+                <li>Begin journey</li>
+                <li>Click only</li>
+                <li>Click only no user</li>
+                <li>Vanishing buttons</li>
+                <li>Dead button</li>
+                <li>Vanishing dialog</li>
+                <li>Vanishing dialog style</li>
+                <li>No response</li>
+                <li>Optional</li>
+                <li>Optional buttons</li>
+                <li>Happy link</li>
+                <li>FOF link</li>
+                <li>Relative link</li>
+                <li>Broken relative link</li>
+                <li>Dead link</li>
+                <li>Missing link</li>
+                <li>Redirect link</li>
+                <li>Combination links</li>
+                <li>Carousel links</li>
+                <li>Carousel links pass</li>
+                <li>Show video</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h2>Situation controls:</h2>
+          <p>This switch will start a timer to interrupt the view with an advert after 15 seconds.</p>
+          <p>Use the selector <code>#timerCheckbox</code> as a prerequisite to enable the advert.</p>
+          <div class="controls">
+            <label class="switch">
+              <input type="checkbox" class="checkbox" id="timerCheckbox">
+              <div class="slider"></div>
+            </label>
+            <div id="timer"></div>
+          </div>
+          <hr style="margin:30px 0;">
+          <h2>New link generator:</h2>
+          <p>The bot can now generate any links, to do this type the word "Generate" (case sensitive) followed by the URL.</p>
+          <p>Example: <code>Generate www.google.com</code></p>
+          <p>The bot will then create the link for you.</p>
+        </div>
+        <div>
+          <h2>These items should not be picked up:</h2>
+          <div class="chat-elements">
+            <div class="message my-message">
+              <p>This is a message typically found within the chatbot. This is using the same classes (selectors) as the
+                ones found in the chat.</p>
+            </div>
+            <div class="message my-message">
+              <p>These should be ignored and not picked up by the E2E tests.</p>
+            </div>
+            <div class="message other-message float-right">
+              <p>If you pick these up in your tests, something went wrong 😪</p>
+            </div>
+            <div class="message my-message button-options">
+              <button>One button</button>
+              <button>Two buttons</button>
+              <button>Three buttons</button>
+              <button>Four buttons</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="container">
+      <h2>BB 2.1 - iframe edition</h1>
+        <p>Made for the awesome Andraco team!</p>
+    </div>
+  </footer>
+</body>
+<div class="chat-start" id="chatStart" onclick="toggleChat()">
+  <img src="bot-icon.svg" alt="Start chatting">
+  <span>Start chatting</span>
+</div>
+<div class="chat-container" id="chatContainer">
+  <div class="container-head"><span id="closeChat" onclick="toggleChat()"><strong>X</strong> close</span></div>
+  <iframe loading="lazy" src="bot.html" frameborder="0" width="100%" height="100%"></iframe>
+</div>
+<div id="cookie-popup" class="popup">
+    <div class="popup-content">
+        <iframe src="cookie.html" frameborder="0"></iframe>
+    </div>
+</div>
+<div id="advert-popup" class="popup ad">
+  <div class="popup-content">
+    <span class="close" onclick="closeAdvert()">&times;</span>
+    <p>Boom boom boom, let me hear you say wayoo...</p>
+    <button id="popup-agree" onclick="closeAdvert()">Wayoo</button>
+  </div>
+</div>
+<script src="script.js"></script>
+<script>
+    var popup = document.getElementById("cookie-popup");
+    function myFunctionInMainPage() {
+        popup.style.display = "none";
+    }
+</script>
+</html>

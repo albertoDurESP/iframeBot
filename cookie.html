@@ -1,0 +1,13 @@
+<link rel="stylesheet" href="style.css">
+    <span class="close" onclick="closePopup()">&times;</span>
+    <p>Before you marry a person, you should first make them use a computer with slow Internet to see who they really
+      are.</p>
+    <button id="popup-agree" onclick="triggerFunctionInMainPage()">I agree</button>
+
+ 
+    <script>
+        function triggerFunctionInMainPage() {
+            // Call the function in the parent (main) window
+            window.parent.myFunctionInMainPage();
+        }
+    </script>
