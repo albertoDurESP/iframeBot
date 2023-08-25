@@ -162,6 +162,7 @@ header {
 header .container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .logo img {
@@ -450,4 +451,10 @@ code {
     border-radius: 5px;
     padding: 1rem;
     font-size: 1rem;
+}
+
+a#logInLink {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
 }
