@@ -185,6 +185,7 @@ footer {
 .flex-container {
   display: flex;
   justify-content: space-evenly;
+  gap: 4rem;
 }
 
 .flex-container h1 {
