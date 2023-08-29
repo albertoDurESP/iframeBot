@@ -12,6 +12,7 @@
     <div class="chat-about">
       <div class="chat-with">Button Bot 2.0</div>
     </div>
+    <p id="user">You are offline <a href="login.html">Log in</a></p>
   </div> <!-- end chat-header -->
 
   <div class="chat-history">
@@ -23,6 +24,7 @@
         <div class="message my-message">
           Hi, I am Button Bot 2.0! I am here to help you test your E2E project.
         </div>
+
       </li>
 
       <li>
@@ -999,7 +1001,7 @@
     let username = getCookie("username");
     console.log("username is: " + username);
   if (username != "") {
-    //alert("Welcome again " + username);
+    document.getElementById("p1").innerHTML = "You are logged in!";
   } 
 }
 </script>
