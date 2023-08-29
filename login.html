@@ -4,14 +4,6 @@
     <title>Login Form</title>
     <link rel="stylesheet" href="style.css">
     <script>
-         document.cookie = "username=John Doe";
-        //set cookie 
-        function setCookie(cname,cvalue,exdays) {
-        const d = new Date();
-        d.setTime(d.getTime() + (exdays*24*60*60*1000));
-        let expires = "expires=" + d.toUTCString();
-        document.cookie = cname + "=" + cvalue + ";" + expires;
-        }
         //validate form
         function validateForm() {
             var username = document.getElementById("username").value;
@@ -21,7 +13,7 @@
                // let user = "james";
               //  setCookie("username", user, 30);
 
-                document.cookie = "username=JohnDoe";
+                document.cookie = "username=admin";
                 // Successful login, redirect to a new URL
                 window.location.href = "index.html";
                
