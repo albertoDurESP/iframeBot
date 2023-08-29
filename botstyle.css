@@ -512,3 +512,8 @@ u {
 .hidden {
   display: none;
 }
+
+p#user {
+  float: right;
+  font-size: 18px;
+}

@@ -12,7 +12,7 @@
     <div class="chat-about">
       <div class="chat-with">Button Bot 2.0</div>
     </div>
-    <p id="user">You are offline <a href="login.html">Log in</a></p>
+    <p id="user">You are offline</p>
   </div> <!-- end chat-header -->
 
   <div class="chat-history">
@@ -1000,8 +1000,9 @@
   function checkCookie() {
     let username = getCookie("username");
     console.log("username is: " + username);
-  if (username != "") {
     document.getElementById("p1").innerHTML = "You are logged in!";
+  if (username != "") {
+    
   } 
 }
 </script>
