@@ -999,11 +999,11 @@
   //check cookie
   function checkCookie() {
     let username = getCookie("username");
-    console.log("username is: " + username);
-    document.getElementById("user").innerHTML = "You are logged in!";
   if (username != "") {
+    document.getElementById("user").innerHTML = "You are logged in!";
+  } else {
     document.getElementById("user").innerHTML = "You are offline";
-  } 
+  }
 }
 </script>
 </body>
