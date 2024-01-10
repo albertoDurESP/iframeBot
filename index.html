@@ -14,7 +14,7 @@
         <div class="logo">
           <img src="bot-icon.svg" alt="Logo">
         </div>
-        <h1>Button Bot 2.1</h1>
+        <h1>Button Bot 2.1<span id="parameter"></span></h1><span id="parameter"></span>
       </div>
 
       <a href="login.html" id="logInLink">Log in</a>
@@ -141,3 +141,10 @@
 <script src="script.js"></script>
 
 </html>
+
+<script>
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  const parameter = urlParams.get('parameter');
+  document.getElementById("parameter").innerHTML = ' - ' + parameter;
+</script>
