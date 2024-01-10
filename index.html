@@ -146,5 +146,8 @@
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
   const parameter = urlParams.get('parameter');
-  document.getElementById("parameter").innerHTML = ' - ' + parameter;
+  if (parameter !== null){
+    document.getElementById("parameter").innerHTML = ' - ' + parameter;
+  }
+  
 </script>
