@@ -8,7 +8,7 @@ var linkGlobal;
     messageToSend: "",
     generatedLink: "",
     messageResponses: [
-      "Here is an example of of a single button:",
+      "Here is an example of a single button:",
       "Here is an example of two buttons:",
       "Here is an example of three buttons:",
       "Here is an example of four buttons:",
