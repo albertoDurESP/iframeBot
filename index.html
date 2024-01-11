@@ -146,7 +146,7 @@
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
   document.getElementById('chat-iframe').src = "bot.html?" + urlParams;
-  if (urlParams.length > 0){
+  if (Array.from(urlParams.values()).length > 0){
     document.getElementById("parameters").innerHTML = ' - ' + Array.from(urlParams.values());
   }
 </script>
